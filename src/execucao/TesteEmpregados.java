@@ -13,9 +13,9 @@ import visao.VisaoEmpregadoHorista;
 public class TesteEmpregados {
     
     public static final String stringMenu = "Forneça uma das opções: \n \n" +
-            "[1] Incluir EmpregadoCLT \n" +
-            "[2] Incluir EmpregadoComissao \n" +
-            "[3] Incluir EmpregadoHorista \n" +
+            "[1] Incluir Empregado CLT \n" +
+            "[2] Incluir Empregado Comissao \n" +
+            "[3] Incluir Empregado Horista \n" +
             "[4] Mostrar Dados \n" +
             "[5] Totalizar Salarios\n" +
             "[6] Sair \n";
@@ -33,18 +33,26 @@ public class TesteEmpregados {
                 visaoEmpregadoTemp = new VisaoEmpregadoCLT();
                 visaoEmpregadoTemp.lerDados();
                 listaEmpregado.add(visaoEmpregadoTemp);
+                
             } else if (resp == 2 ){
                 visaoEmpregadoTemp = new VisaoEmpregadoComissao();
                 visaoEmpregadoTemp.lerDados();
                 listaEmpregado.add(visaoEmpregadoTemp);
+                
             } else if (resp == 3){
                 visaoEmpregadoTemp = new VisaoEmpregadoHorista();
                 visaoEmpregadoTemp.lerDados();
                 listaEmpregado.add(visaoEmpregadoTemp);
+                
             } else if (resp == 4){
-                for (IVisaoEmpregado visao : listaEmpregado){
+                if (listaEmpregado.size() >= 5){
+                    for (IVisaoEmpregado visao : listaEmpregado){
                     visao.mostraDados();
-                }
+                    }
+                } else {
+                JOptionPane.showMessageDialog(null, "Lista deve ter no mínimo 5 empregados.");
+            }
+                
             } else if (resp == 5){
                 totalSalarios = 0;
                 for (IVisaoEmpregado visao : listaEmpregado){
