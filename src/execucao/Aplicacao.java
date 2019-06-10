@@ -10,11 +10,11 @@ import visao.VisaoEmpregadoComissao;
 import visao.VisaoEmpregadoHorista;
 
 
-public class TesteEmpregados {
+public class Aplicacao {
     
     public static final String stringMenu = "Forneça uma das opções: \n \n" +
             "[1] Incluir Empregado CLT \n" +
-            "[2] Incluir Empregado Comissao \n" +
+            "[2] Incluir Empregado Comissionado \n" +
             "[3] Incluir Empregado Horista \n" +
             "[4] Mostrar Dados \n" +
             "[5] Totalizar Salarios\n" +
