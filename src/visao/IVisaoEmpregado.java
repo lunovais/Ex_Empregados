@@ -16,6 +16,4 @@ public interface IVisaoEmpregado {
     
     Empregado getEmpregado();
     
-    Endereco getEnderecoCompleto();
-    
 }

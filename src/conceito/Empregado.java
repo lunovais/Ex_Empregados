@@ -68,7 +68,7 @@ public abstract class Empregado extends Pessoa {
     
     public final void setRuaEmpresa(String rua) throws EnderecoException{
        if (rua.length() > 3){
-            this.enderecoEmpresa.setRua();
+            this.enderecoEmpresa.setRua(rua);
         } else {
             throw new EnderecoException ("Rua deve ter mais que 3 caracteres");
         }
@@ -79,8 +79,8 @@ public abstract class Empregado extends Pessoa {
         return this.enderecoEmpresa.getNumero();
     }
     
-    public final void setNumeroEmpresa() throws EnderecoException{
-        this.enderecoEmpresa.setNumero();
+    public final void setNumeroEmpresa(int numero) throws EnderecoException{
+        this.enderecoEmpresa.setNumero(numero);
     }
     
     
@@ -90,7 +90,7 @@ public abstract class Empregado extends Pessoa {
     
     public final void setBairroEmpresa(String bairro) throws EnderecoException{
         if (bairro.length() > 3){
-            this.enderecoEmpresa.setBairro();
+            this.enderecoEmpresa.setBairro(bairro);
         } else {
             throw new EnderecoException ("Bairro deve ter mais que 3 caracteres");
         }
@@ -103,7 +103,7 @@ public abstract class Empregado extends Pessoa {
     
     public final void setCidadeEmpresa(String cidade) throws EnderecoException{
         if (cidade.length() > 3){
-            this.enderecoEmpresa.setCidade();
+            this.enderecoEmpresa.setCidade(cidade);
         } else {
             throw new EnderecoException ("Cidade deve ter mais que 3 caracteres");
         }

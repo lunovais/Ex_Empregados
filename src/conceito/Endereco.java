@@ -17,7 +17,7 @@ public class Endereco {
         this.bairro = "";
         this.cidade = "";
         this.cep = "";
-        this.uf = "";        
+        this.uf = "";
         
     }
 
@@ -29,9 +29,10 @@ public class Endereco {
     }
 
     /**
+     * @param rua
      * @throws conceito.EnderecoException
      */
-    public final void setRua() throws EnderecoException {
+    public final void setRua(String rua) throws EnderecoException {
         if (rua.length() > 3){
             this.rua = rua;
         } else {
@@ -49,7 +50,7 @@ public class Endereco {
     /**
      * @param numero the numero to set
      */
-    public void setNumero() {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
@@ -61,9 +62,10 @@ public class Endereco {
     }
 
     /**
+     * @param bairro
      * @throws conceito.EnderecoException
      */
-    public final void setBairro() throws EnderecoException {
+    public final void setBairro(String bairro) throws EnderecoException {
         if (bairro.length() > 3){
             this.bairro = bairro;
         } else {
@@ -79,9 +81,10 @@ public class Endereco {
     }
 
     /**
+     * @param cidade
      * @throws conceito.EnderecoException
      */
-    public final void setCidade() throws EnderecoException {
+    public final void setCidade(String cidade) throws EnderecoException {
         if (cidade.length() > 3){
             this.cidade = cidade;
         } else {
@@ -98,6 +101,7 @@ public class Endereco {
 
     /**
      * @param cep the cep to set
+     * @throws conceito.EnderecoException
      */
     public void setCep(String cep) throws EnderecoException {
         if (cep.length() == 10){
@@ -130,7 +134,5 @@ public class Endereco {
         return "Endereço Completo: "+ rua + ", " + numero + " - " + bairro + 
                 ". " + cidade + " - " + uf + ". " + cep + ".";
     }
-    
-    
 
 }

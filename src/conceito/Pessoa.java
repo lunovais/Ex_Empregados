@@ -92,8 +92,8 @@ public class Pessoa {
     /**
      * @throws conceito.EnderecoException 
      */
-    public final void setRua() throws EnderecoException {
-        this.endereco.setRua();
+    public final void setRua(String rua) throws EnderecoException {
+        this.endereco.setRua(rua);
     }
 
     /**
@@ -106,8 +106,8 @@ public class Pessoa {
 
     /**
      */
-    public final void setNumero() {
-        this.endereco.setNumero();
+    public final void setNumero(int numero) {
+        this.endereco.setNumero(numero);
     }
 
     /**
@@ -121,8 +121,8 @@ public class Pessoa {
     /**
      * @throws conceito.EnderecoException
      */
-    public final void setBairro() throws EnderecoException {
-        this.endereco.setBairro();
+    public final void setBairro(String bairro) throws EnderecoException {
+        this.endereco.setBairro(bairro);
     }
 
     /**
@@ -136,8 +136,8 @@ public class Pessoa {
     /**
      * @throws conceito.EnderecoException
      */
-    public final void setCidade() throws EnderecoException {
-        this.endereco.setCidade();
+    public final void setCidade(String cidade) throws EnderecoException {
+        this.endereco.setCidade(cidade);
     }
 
     /**
