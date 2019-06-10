@@ -43,19 +43,17 @@ public class VisaoEmpregadoCLT implements IVisaoEmpregado {
                     emp.setNumeroFilhos(Integer.parseInt(
                             JOptionPane.showInputDialog("Forneca o numero de filhos:")));
                     emp.setNomeEmpresa(JOptionPane.showInputDialog("Forneça o nome da empresa:"));
-                    endereco.setCep(JOptionPane.showInputDialog("Forneça o cep:"));
-                    endereco.setBairro(JOptionPane.showInputDialog("Forneça o bairro:"));
-                    endereco.setRua(JOptionPane.showInputDialog("Forneça a rua:"));
-                    endereco.setNumero(Integer.parseInt(JOptionPane.showInputDialog("Forneça o número:")));
-                    endereco.setCidade(JOptionPane.showInputDialog("Forneça a cidade:"));
-                    endereco.setUf(JOptionPane.showInputDialog("Forneça a UF:"));
+                    emp.setCepEmpresa(JOptionPane.showInputDialog("Forneça o cep:"));
+                    emp.setBairroEmpresa(JOptionPane.showInputDialog("Forneça o bairro:"));
+                    emp.setRuaEmpresa(JOptionPane.showInputDialog("Forneça a rua:"));
+                    emp.setNumeroEmpresa(Integer.parseInt(JOptionPane.showInputDialog("Forneça o número:")));
+                    emp.setCidadeEmpresa(JOptionPane.showInputDialog("Forneça a cidade:"));
+                    emp.setUfEmpresa(JOptionPane.showInputDialog("Forneça a UF:"));
                     continuaLoop = false;
-                } catch (PessoaException e) {
+                } catch (PessoaException | EnderecoException e) {
                     JOptionPane.showMessageDialog(null, e.getMessage());  
                 } catch (NumberFormatException e) {
                     JOptionPane.showMessageDialog(null, "Erro de digitacao");
-                } catch (EnderecoException ex) {
-                    Logger.getLogger(VisaoEmpregadoCLT.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 
             } while (continuaLoop);

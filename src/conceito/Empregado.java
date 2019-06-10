@@ -12,6 +12,7 @@ public abstract class Empregado extends Pessoa {
     public Empregado() {
         this.cargo = "";
         this.nomeEmpresa = "";
+        this.enderecoEmpresa = new Endereco();
     }
 
 
@@ -20,6 +21,7 @@ public abstract class Empregado extends Pessoa {
         super(nome, nomeMae, nomePai);
         this.cargo = "";
         this.nomeEmpresa = "";
+        this.enderecoEmpresa = new Endereco();
     }
 
     /**
